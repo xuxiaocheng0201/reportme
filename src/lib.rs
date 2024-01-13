@@ -31,3 +31,13 @@ pub fn report(url: &str, timeout: Duration, name: &str, version: &str) -> Result
         })
     }
 }
+
+pub fn report_build(url: &str, timeout: Duration, name: &str, version: &str) {
+    println!("cargo:rerun-if-env-changed=DONT_REPORT_ME");
+    if option_env!("DONT_REPORT_ME").is_none() {
+        let res = report(url, timeout, name, version);
+        if let Err(e) = res {
+            println!("cargo:warning=ReportMe: {}", e);
+        }
+    }
+}
