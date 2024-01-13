@@ -19,5 +19,21 @@ Add this to your `Cargo.toml`:
 
 ```toml
 [build.dependencies]
-reportme = "~0.1"
+reportme = "~0.2"
+```
+
+# Example
+
+Use [Cloudflare](Cloudflare_zh.md) to build server. **FREE!**
+
+```rust
+use std::time::Duration;
+use reportme::report_build;
+
+fn main() {
+    report_build("https://<YourUrl>.pages.dev/metrics",
+                 Duration::from_secs(10),
+                 env!("CARGO_PKG_NAME"),
+                 env!("CARGO_PKG_VERSION"));
+}
 ```
