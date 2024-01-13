@@ -10,6 +10,7 @@ repository = "https://github.com/xuxiaocheng0201/reportme/"
 documentation = "https://docs.rs/reportme/"
 
 [dependencies]
+anyhow = "^1.0"
 reqwest = { version = "~0.11", features = ["json"] }
 
 [badges]
