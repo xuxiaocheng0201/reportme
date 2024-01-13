@@ -17,7 +17,7 @@ pub fn report(url: &str, timeout: Duration, name: &str, version: &str) -> Result
         .send_json(ureq::json!({"crate": name, "ver": version}))?
         .into_json::<Value>()?;
     if get_bool(&res, "ok")? {
-        if get_bool(&res, "success")? {
+        if get_bool(&res, "res")? {
             Ok(())
         } else {
             Err(anyhow!("Failed to report."))
