@@ -8,6 +8,7 @@ readme = "README.md"
 license = "MIT"
 repository = "https://github.com/xuxiaocheng0201/reportme/"
 documentation = "https://docs.rs/reportme/"
+keywords = ["metrics", "report"]
 
 [dependencies]
 anyhow = "^1.0"
