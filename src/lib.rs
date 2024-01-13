@@ -1,11 +1,10 @@
 use std::collections::HashMap;
+use std::error::Error;
 use std::str::FromStr;
 use std::time::Duration;
 use anyhow::{anyhow, Result};
 
-pub extern crate ureq;
-
-fn get_field<T: FromStr>(map: &HashMap<String, String>, key: &str) -> Result<T> {
+fn get_field<T: FromStr>(map: &HashMap<String, String>, key: &str) -> Result<T> where T::Err: Error + Send + Sync + 'static {
     Ok(map.get(key).ok_or_else(|| anyhow!("Missing field: {}", key))?.parse()?)
 }
 
