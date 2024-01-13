@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] - 2024-1-13
+
+### Added
+
+* 添加简易版统计端构建教程
+* 简化build.rs代码
+
 ## [0.1.1] - 2024-1-13
 
 ### Changed
