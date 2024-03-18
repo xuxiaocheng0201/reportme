@@ -24,9 +24,9 @@ reportme = "~0.2"
 
 # Example
 
-Use [Cloudflare](Cloudflare_zh.md) to build server. **FREE!**
+Use [Cloudflare](Cloudflare_zh.md) to build server. **IT IS FREE!**
 
-```rust
+```rust,no_run
 use std::time::Duration;
 use reportme::report_build;
 

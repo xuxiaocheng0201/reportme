@@ -11,8 +11,8 @@ documentation = "https://docs.rs/reportme/"
 keywords = ["metrics", "report"]
 
 [dependencies]
-anyhow = "^1.0"
-ureq = { version = "^2.9", features = ["tls", "json"], default-features = false }
+anyhow = "^1"
+ureq = { version = "^2", features = ["tls", "json"], default-features = false }
 
 [badges]
-maintenance = { status = "actively-developed" }
+maintenance = { status = "passively-maintained" }

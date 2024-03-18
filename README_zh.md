@@ -27,7 +27,7 @@ reportme = "~0.2"
 
 请参阅[Cloudflare](Cloudflare_zh.md) 来构建服务器（完全免费）！
 
-```rust
+```rust,no_run
 use std::time::Duration;
 use reportme::report_build;
 
